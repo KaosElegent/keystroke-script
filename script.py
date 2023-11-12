@@ -8,7 +8,7 @@ import keyboard
 import time
 from tkinter import filedialog
 
-txtPath = filedialog.askopenfilename(initialdir="E://Classes/IPC/")
+txtPath = filedialog.askopenfilename(initialdir=".")
 
 def code():
     with open(txtPath, 'r') as file:
@@ -20,6 +20,7 @@ def code():
 def listener():
     while True:     
         if keyboard.is_pressed('ctrl+f1'):
+            time.sleep(3)
             code()
         elif keyboard.is_pressed('ctrl+f2'):
             return
